@@ -1,16 +1,14 @@
-
-import axios from "axios";
-import { useAuthStore } from "../store/authstore";
-
-const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL,
-  withCredentials: true
-});
-
-api.interceptors.request.use((config) => {
-  const token = useAuthStore.getState().accessToken;
-  if (token) config.headers.Authorization = `Bearer ${token}`;
-  return config;
-});
-
-export default api;
+export const fetchCurrentUser = async () => {
+    const token = localStorage.getItem("accessToken");
+  
+    const res = await fetch("http://localhost:5000/api/auth/me", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      credentials: "include",
+    });
+  
+    if (!res.ok) throw new Error("Unauthorized");
+  
+    return res.json();
+  };
