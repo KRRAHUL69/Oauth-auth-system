@@ -1,6 +1,7 @@
 
 const jwt = require("jsonwebtoken");
-const { v4: uuidv4 } = require("uuid");
+const uuidv4 = (...args) =>
+  import('uuid').then(({ v4 }) => v4(...args));
 
 exports.generateTokens = async (user) => {
   const accessToken = jwt.sign(
