@@ -61,14 +61,6 @@ cd auth-system
 cd backend
 npm install
 
-Create .env file -
-PORT=5000
-MONGO_URI=your_mongodb_connection
-JWT_ACCESS_SECRET=your_access_secret
-JWT_REFRESH_SECRET=your_refresh_secret
-REDIS_URL=your_redis_url
-ALLOWED_IPS=127.0.0.1
-
 Run backend -
 npm run dev
 
@@ -96,14 +88,11 @@ POST	/api/auth/logout	    Logout user
 
 🔐 Authentication Flow
 Register → Login → Access Token → Protected API → Refresh Token → Logout
-
 Access Token: stored in memory
-
 Refresh Token: stored in HttpOnly cookie
 
 
 🧪 Testing
-
 Use Postman or Thunder Client
 
 Steps:
@@ -125,9 +114,8 @@ Call /api/auth/me with Bearer token
 
 
 👨‍💻 Author
-
 ### Rahul Kumar
-#### Fullstack Developer 
+Fullstack Developer 
 
 📌 Notes
 
