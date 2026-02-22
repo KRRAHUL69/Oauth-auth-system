@@ -126,8 +126,8 @@ Call /api/auth/me with Bearer token
 
 👨‍💻 Author
 
-# Rahul Kumar
-Fullstack Developer 
+### Rahul Kumar
+#### Fullstack Developer 
 
 📌 Notes
 
