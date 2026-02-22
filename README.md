@@ -50,28 +50,6 @@ This project implements **OAuth 2.0 Authentication** with access tokens, refresh
 
 ---
 
-## 📂 Project Structure
-┣ backend/
-┃ ┣ src/
-┃ ┃ ┣ config/
-┃ ┃ ┣ controllers/
-┃ ┃ ┣ middleware/
-┃ ┃ ┣ models/
-┃ ┃ ┣ routes/
-┃ ┃ ┣ utils/
-┃ ┃ ┣ app.js
-┃ ┃ ┗ server.js
-┃ ┗ .env
-┣ frontend/
-┃ ┣ app/
-┃ ┃ ┣ page.js
-┃ ┃ ┣ register/page.js
-┃ ┃ ┣ login/page.js
-┃ ┃ ┗ dashboard/page.js
-┃ ┣ store/
-┃ ┗ lib/
-┗ README.md
-
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone repository
@@ -129,13 +107,9 @@ Refresh Token: stored in HttpOnly cookie
 Use Postman or Thunder Client
 
 Steps:
-
 Register user
-
 Login
-
 Copy access token
-
 Call /api/auth/me with Bearer token
 
 📦 Deliverables Covered
@@ -152,7 +126,7 @@ Call /api/auth/me with Bearer token
 
 👨‍💻 Author
 
-Rahul Kumar
+# Rahul Kumar
 Fullstack Developer 
 
 📌 Notes
