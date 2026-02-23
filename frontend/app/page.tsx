@@ -59,7 +59,7 @@ export default function Home() {
   );
 }
 
-const styles : { [key: string]: CSSProperties } = {
+const styles: { [key: string]: CSSProperties } = {
   container: {
     height: "100vh",
     display: "flex",
@@ -67,29 +67,37 @@ const styles : { [key: string]: CSSProperties } = {
     alignItems: "center",
     background: "#f4f6fb",
   },
+
   card: {
     width: "420px",
     padding: "40px",
-    background: "#fff",
+    background: "#ffffff",            
     borderRadius: "12px",
     boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
     textAlign: "center",
+    color: "#111827",                 
   },
+
   title: {
     fontSize: "26px",
     marginBottom: "10px",
+    color: "#111827",                
+    fontWeight: "600",
   },
+
   subtitle: {
     fontSize: "14px",
-    color: "#555",
     marginBottom: "25px",
+    color: "#6b7280",               
   },
+
   buttonGroup: {
     display: "flex",
     gap: "10px",
     justifyContent: "center",
     marginBottom: "25px",
   },
+
   primaryBtn: {
     padding: "10px 16px",
     background: "#4f46e5",
@@ -97,20 +105,28 @@ const styles : { [key: string]: CSSProperties } = {
     border: "none",
     borderRadius: "6px",
     cursor: "pointer",
+    fontWeight: "500",
   },
+
   secondaryBtn: {
     padding: "10px 16px",
     background: "#e5e7eb",
+    color: "#111827",                
     border: "none",
     borderRadius: "6px",
     cursor: "pointer",
+    fontWeight: "500",
   },
+
   features: {
     textAlign: "left",
+    color: "#111827",              
   },
+
   list: {
     marginTop: "10px",
     paddingLeft: "18px",
     lineHeight: "1.8",
+    color: "#374151",              
   },
 };

@@ -15,7 +15,7 @@ export default function Dashboard() {
     const loadUser = async () => {
       try {
         const data = await fetchCurrentUser();
-        setUser(data.user);
+        setUser(data);
       } catch (err) {
         router.push("/login");
       } finally {
@@ -41,8 +41,10 @@ export default function Dashboard() {
   return (
     <div style={styles.container}>
       <div style={styles.card}>
-        <h2>Dashboard</h2>
-        <p>Welcome, {user?.id}</p>
+        <h2 style={styles.title}>Dashboard</h2>
+        <p style={styles.welcome}>
+          Welcome <strong>{user?.name}</strong>
+        </p>
 
         <button style={styles.button} onClick={handleLogout}>
           Logout
@@ -53,7 +55,45 @@ export default function Dashboard() {
 }
 
 const styles = {
-  container: { height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" },
-  card: { padding: "30px", background: "#fff", borderRadius: "10px", boxShadow: "0 10px 25px rgba(0,0,0,0.1)" },
-  button: { marginTop: "15px", padding: "10px", background: "#ef4444", color: "#fff", border: "none", borderRadius: "6px" }
+  container: {
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "#f5f7fb",
+  },
+
+  card: {
+    width: "350px",
+    padding: "30px",
+    borderRadius: "12px",
+    background: "#ffffff",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.3)",
+    textAlign: "center",
+  },
+
+  title: {
+    fontSize: "22px",
+    fontWeight: "600",
+    marginBottom: "10px",
+    color: "#111827",
+  },
+
+  welcome: {
+    marginTop: "8px",
+    marginBottom: "20px",
+    fontSize: "16px",
+    color: "#374151",
+  },
+
+  button: {
+    padding: "10px 16px",
+    background: "#ef4444",
+    color: "#fff",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontWeight: "500",
+    transition: "0.2s",
+  },
 };

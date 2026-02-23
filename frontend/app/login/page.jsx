@@ -99,13 +99,72 @@ export default function LoginPage() {
 }
 
 const styles = {
-  container: { height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" },
-  card: { width: "350px", padding: "30px", borderRadius: "10px", background: "#fff", boxShadow: "0 10px 25px rgba(0,0,0,0.1)" },
-  title: { textAlign: "center", marginBottom: "20px" },
-  form: { display: "flex", flexDirection: "column", gap: "12px" },
-  input: { padding: "10px", border: "1px solid #ddd", borderRadius: "6px" },
-  button: { padding: "10px", background: "#4f46e5", color: "#fff", border: "none", borderRadius: "6px" },
-  error: { color: "red", marginTop: "10px", textAlign: "center" },
-  footer: { marginTop: "10px", textAlign: "center" },
-  link: { color: "#4f46e5", cursor: "pointer" }
-};
+    container: {
+      height: "100vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      background: "#f5f7fb",
+    },
+  
+    card: {
+      width: "350px",
+      padding: "30px",
+      borderRadius: "10px",
+      background: "#ffffff",
+      boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+      color: "#111827",            
+    },
+  
+    title: {
+      textAlign: "center",
+      marginBottom: "20px",
+      fontSize: "22px",
+      fontWeight: "600",
+      color: "#111827",           
+    },
+  
+    form: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "12px",
+    },
+  
+    input: {
+      padding: "10px",
+      border: "1px solid #d1d5db",
+      borderRadius: "6px",
+      color: "#111827",           
+      background: "#ffffff",
+      outline: "none",
+    },
+  
+    button: {
+      padding: "10px",
+      background: "#4f46e5",
+      color: "#ffffff",
+      border: "none",
+      borderRadius: "6px",
+      cursor: "pointer",
+      fontWeight: "500",
+    },
+  
+    error: {
+      color: "#dc2626",           
+      marginTop: "10px",
+      textAlign: "center",
+      fontWeight: "500",
+    },
+  
+    footer: {
+      marginTop: "10px",
+      textAlign: "center",
+      color: "#6b7280",           
+    },
+  
+    link: {
+      color: "#4f46e5",
+      cursor: "pointer",
+      fontWeight: "600",
+    },
+  };

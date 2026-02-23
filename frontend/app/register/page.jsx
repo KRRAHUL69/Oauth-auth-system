@@ -134,59 +134,79 @@ export default function RegisterPage() {
 }
 
 const styles = {
-    container: {
-      height: "100vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      background: "#f5f7fb",
-    },
-    card: {
-      width: "350px",
-      padding: "30px",
-      borderRadius: "10px",
-      background: "#fff",
-      boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-    },
-    title: {
-      marginBottom: "20px",
-      textAlign: "center",
-    },
-    form: {
-      display: "flex",
-      flexDirection: "column",
-      gap: "12px",
-    },
-    input: {
-      padding: "10px",
-      borderRadius: "6px",
-      border: "1px solid #ddd",
-    },
-    button: {
-      padding: "10px",
-      background: "#4f46e5",
-      color: "#fff",
-      border: "none",
-      borderRadius: "6px",
-      cursor: "pointer",
-    },
-    error: {
-      color: "red",
-      marginTop: "10px",
-      textAlign: "center",
-    },
-    success: {
-      color: "green",
-      marginTop: "10px",
-      textAlign: "center",
-    },
-    footer: {
-      marginTop: "15px",
-      textAlign: "center",
-    },
-    link: {
-      color: "#4f46e5",
-      cursor: "pointer",
-      fontWeight: "bold",
-    },
-  };
+  container: {
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "#f5f7fb",
+  },
+
+  card: {
+    width: "350px",
+    padding: "30px",
+    borderRadius: "10px",
+    background: "#ffffff",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+    color: "#111827",           
+  },
+
+  title: {
+    marginBottom: "20px",
+    textAlign: "center",
+    color: "#111827",           
+    fontSize: "22px",
+    fontWeight: "600",
+  },
+
+  form: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "12px",
+  },
+
+  input: {
+    padding: "10px",
+    borderRadius: "6px",
+    border: "1px solid #d1d5db",
+    color: "#111827",            
+    background: "#ffffff",      
+    outline: "none",
+  },
+
+  button: {
+    padding: "10px",
+    background: "#4f46e5",
+    color: "#ffffff",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontWeight: "500",
+  },
+
+  error: {
+    color: "#dc2626",          
+    marginTop: "10px",
+    textAlign: "center",
+    fontWeight: "500",
+  },
+
+  success: {
+    color: "#16a34a",           
+    marginTop: "10px",
+    textAlign: "center",
+    fontWeight: "500",
+  },
+
+  footer: {
+    marginTop: "15px",
+    textAlign: "center",
+    color: "#6b7280",           
+  },
+
+  link: {
+    color: "#4f46e5",
+    cursor: "pointer",
+    fontWeight: "600",
+  },
+};
