@@ -24,7 +24,7 @@ export default function Dashboard() {
     };
 
     loadUser();
-  }, []);
+  }, [router, setUser]);
 
   const handleLogout = async () => {
     await fetch("http://localhost:5000/api/auth/logout", {

@@ -1,16 +1,30 @@
-
 const jwt = require("jsonwebtoken");
 const User = require("../models/user.model");
 
 module.exports = async (req, res, next) => {
-  const token = req.headers.authorization?.split(" ")[1];
-  if (!token) return res.sendStatus(401);
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader || !authHeader.startsWith("Bearer ")) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+
+  const token = authHeader.split(" ")[1];
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = await User.findById(decoded.userId).select("-password");
+
+    const user = await User.findById(decoded.userId).select("-password");
+
+    if (!user) {
+      console.log("User not found for ID:", decoded.userId);
+      return res.status(403).json({ message: "Forbidden" });
+    }
+
+    req.user = user;
     next();
-  } catch {
-    res.sendStatus(403);
+
+  } catch (err) {
+    console.log("JWT ERROR:", err.message);
+    return res.status(401).json({ message: "Invalid token" });
   }
 };

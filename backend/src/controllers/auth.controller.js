@@ -2,7 +2,8 @@
 const bcrypt = require("bcrypt");
 const User = require("../models/user.model");
 const { generateTokens } = require("../services/token.service");
-const redis = require("../config/redis");
+// const redis = require("../config/redis");
+
 
 exports.register = async (req, res) => {
   const { name, email, password } = req.body;
@@ -25,7 +26,7 @@ exports.login = async (req, res) => {
   const { accessToken, refreshToken } = await generateTokens(user);
 
   // store refresh token in Redis
-  await redis.set(`refresh_${user._id}`, refreshToken);
+  // await redis.set(`refresh_${user._id}`, refreshToken);
 
   res
     .cookie("refreshToken", refreshToken, {
@@ -41,9 +42,9 @@ exports.getMe = async (req, res) => {
 };
 
 exports.logout = async (req, res) => {
-  const userId = req.user._id;
+  // const userId = req.user._id;
 
-  await redis.del(`refresh_${userId}`);
+  // await redis.del(`refresh_${userId}`);
 
   res.clearCookie("refreshToken");
 
