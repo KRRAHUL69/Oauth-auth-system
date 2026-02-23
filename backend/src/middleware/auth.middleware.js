@@ -1,6 +1,25 @@
 const jwt = require("jsonwebtoken");
 const User = require("../models/user.model");
 
+exports.generateTokens = async (user) => {
+    const accessToken = jwt.sign(
+      { userId: user._id },
+      process.env.JWT_SECRET,
+      { expiresIn: "15m" }
+    );
+  
+    const refreshToken = jwt.sign(
+      {
+        userId: user._id,
+        jti: uuidv4(), 
+      },
+      process.env.JWT_REFRESH_SECRET,
+      { expiresIn: "7d" }
+    );
+  
+    return { accessToken, refreshToken };
+};
+
 module.exports = async (req, res, next) => {
   const authHeader = req.headers.authorization;
 
